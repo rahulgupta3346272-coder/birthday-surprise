@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Anusha ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#2b1055,#6a1b9a,#ff6ec7);
+color:white;
+overflow:hidden;
+text-align:center;
+}
+
+#gift{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+cursor:pointer;
+}
+
+button{
+padding:15px 30px;
+font-size:20px;
+border:none;
+border-radius:40px;
+background:#ff4da6;
+color:white;
+box-shadow:0 0 20px pink;
+cursor:pointer;
+}
+
+#content{
+display:none;
+padding:20px;
+animation:fade 2s;
+}
+
+h1{
+font-size:48px;
+color:#fff;
+text-shadow:0 0 10px #fff,0 0 20px pink,0 0 40px hotpink;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px white;}
+to{text-shadow:0 0 30px hotpink;}
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+img{
+width:180px;
+height:180px;
+border-radius:50%;
+border:5px solid white;
+margin:10px;
+object-fit:cover;
+}
+
+.heart{
+position:absolute;
+color:pink;
+animation:float 6s linear infinite;
+font-size:25px;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-100vh);}
+}
+</style>
+</head>
+
+<body>
+
+<div id="gift">
+<h2>🎁 A Special Surprise Awaits...</h2>
+<button onclick="openGift()">Click To Open Your Gift</button>
+</div>
+
+<div id="content">
+
+<h1>🎉 Happy Birthday<br>Anusha Pariyar ❤️</h1>
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+
+<p style="font-size:22px;">
+Happy Birthday, My Love ❤️<br><br>
+
+Every moment with you is special.<br>
+Your smile makes my world brighter.<br>
+I wish you endless happiness, success and love.<br>
+
+Thank you for being in my life.<br><br>
+
+I Love You Forever ❤️<br><br>
+
+— Yours,<br>
+<b>Prince Gupta</b>
+
+</p>
+
+<audio autoplay loop controls>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<script>
+function openGift(){
+document.getElementById("gift").style.display="none";
+document.getElementById("content").style.display="block";
+
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=(20+Math.random()*25)+"px";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
+},200);
+}
+</script>
+
+</body>
+</html>
