@@ -117,7 +117,8 @@ I Love You Forever ❤️<br><br>
 function openGift(){
 document.getElementById("gift").style.display="none";
 document.getElementById("content").style.display="block";
-
+const music = document.getElementById("bgMusic");
+music.play().catch(err => console.log(err));
 setInterval(()=>{
 let h=document.createElement("div");
 h.className="heart";
