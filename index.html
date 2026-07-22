@@ -1,4 +1,4 @@
-JulyyyCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -240,7 +240,6 @@ padding:25px;
 <audio id="music" controller autoplay loop>
 <source src="happy-birthday.mp3.mp3" type="audio/mpeg">
 </audio>
-
 document.addEventListener("touchstart", function startMusic() {
     music.play().catch(() => {});
     document.removeEventListener("touchstart", startMusic);
