@@ -237,14 +237,9 @@ padding:25px;
 
 <div id="hearts"></div>
 
-<audio id="music" loop>
+<audio id="music" controller autoplay loop>
 <source src="happy-birthday.mp3.mp3" type="audio/mpeg">
-</audio>const music = document.getElementById("music");
-
-document.addEventListener("click", function startMusic() {
-    music.play().catch(() => {});
-    document.removeEventListener("click", startMusic);
-}, { once: true });
+</audio>
 
 document.addEventListener("touchstart", function startMusic() {
     music.play().catch(() => {});
